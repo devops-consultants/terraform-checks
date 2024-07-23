@@ -1,3 +1,12 @@
+## [0.1.2](https://github.com/devops-consultants/terraform-checks/compare/v0.1.1...v0.1.2) (2024-07-23)
+
+
+### Bug Fixes
+
+* Renamed MODULE_DIR to TF_MODULE_PATH ([14f3ed9](https://github.com/devops-consultants/terraform-checks/commit/14f3ed9105b848f75e9e3e40bc4b14f736d4245d))
+
+
+
 ## [0.1.1](https://github.com/devops-consultants/terraform-checks/compare/v0.1.0...v0.1.1) (2024-07-23)
 
 
