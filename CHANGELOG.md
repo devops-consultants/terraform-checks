@@ -1,3 +1,10 @@
+## [0.1.5](https://github.com/devops-consultants/terraform-checks/compare/v0.1.4...v0.1.5) (2024-07-23)
+
+
+### Bug Fixes
+
+* added 'apk upgrade' to install latest packages ([2234274](https://github.com/devops-consultants/terraform-checks/commit/22342745dd32179d6e6a2069dd61928766b9b279))
+
 ## [0.1.4](https://github.com/devops-consultants/terraform-checks/compare/v0.1.3...v0.1.4) (2024-07-23)
 
 
