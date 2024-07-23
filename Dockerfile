@@ -6,8 +6,10 @@ RUN apk add --update --no-cache bash git curl gpgv tflint
 ENV TFENV_INSTALL_DIR=/usr/local/tfenv
 RUN git clone --depth=1 https://github.com/tfutils/tfenv.git ${TFENV_INSTALL_DIR} && \
     echo 'export PATH="${TFENV_INSTALL_DIR}/bin:$PATH"' >> ~/.bash_profile && \
-    echo 'trust-tfenv: yes' > ${TFENV_INSTALL_DIR}/use-gpgv
+    echo 'trust-tfenv: yes' > ${TFENV_INSTALL_DIR}/use-gpgv && \
+    echo "plugin_cache_dir = \"/root/.terraform.d/plugin-cache\"" > /root/.terraformrc
 ENV PATH=${TFENV_INSTALL_DIR}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
 
 # Install the latest version of Terraform
 RUN tfenv install latest && tfenv use latest
