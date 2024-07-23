@@ -3,7 +3,7 @@ name: Docker
 on:
   push:
     branches:
-      - master
+      - main
 
 env:
   REGISTRY_IMAGE: devopsconsultants/terraform-checks
