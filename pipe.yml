@@ -1,0 +1,11 @@
+name: Terraform Code Checks
+image: devopsconsultants/terraform-checks:0.1.0
+description: This pipe runs best practise terraform checks for Bitbucket Pipelines.
+category: Code quality
+repository: https://github.com/devops-consultants/terraform-checks
+maintainer:
+  name: DevOps Consultants
+tags:
+  - bitbucket-pipelines
+  - pipes
+  - bash
