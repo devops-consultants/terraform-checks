@@ -8,18 +8,22 @@ Add the following snippet to the script section of your `bitbucket-pipelines.yml
 
 ```yaml
 script:
-  - pipe: devopsconsultants/terraform-checks:0.1.0
+  - pipe: docker://quay.io/devops_consultants/terraform-checks:latest
     variables:
-      NAME: "<string>"
+      TF_MODULE_PATH: "<string>"
       # DEBUG: "<boolean>" # Optional
 ```
 
 ## Variables
 
-| Variable  | Usage                                              |
-| --------- | -------------------------------------------------- |
-| NAME (\*) | The name that will be printed in the logs          |
-| DEBUG     | Turn on extra debug information. Default: `false`. |
+| Variable            | Usage                                              |
+| ------------------- | -------------------------------------------------- |
+| TF_MODULE_PATH (\*) | The path to the module                             |
+| DEBUG               | Turn on extra debug information. Default: `false`. |
+| RUN_FMT             | Run Terraform Format. Default: `true`.             |
+| RUN_VALIDATE        | Run Terraform Validate. Default: `true`.           |
+| RUN_TFLINT          | Run tflint. Default: `true`                        |
+| RUN_TRIVY           | Run trivy. Default: `true`                         |
 
 _(\*) = required variable._
 
@@ -31,17 +35,17 @@ Basic example:
 
 ```yaml
 script:
-  - pipe: devopsconsultants/terraform-checks:0.1.0
+  - pipe: docker://quay.io/devops_consultants/terraform-checks:latest
     variables:
-      NAME: "foobar"
+      TF_MODULE_PATH: "modules/foobar"
 ```
 
 Advanced example:
 
 ```yaml
 script:
-  - pipe: devopsconsultants/terraform-checks:0.1.0
+  - pipe: docker://quay.io/devops_consultants/terraform-checks:latest
     variables:
-      NAME: "foobar"
+      TF_MODULE_PATH: "modules/foobar"
       DEBUG: "true"
 ```
