@@ -7,7 +7,7 @@ source "$(dirname "$0")/common.sh"
 info "Running module tests"
 
 # Required parameters
-MODULE_DIR=${MODULE_DIR:?"MODULE_DIR env variable is required"}
+TF_MODULE_PATH=${TF_MODULE_PATH:?"TF_MODULE_PATH env variable is required"}
 
 # Default values
 DEBUG=${DEBUG:="false"}
@@ -24,7 +24,7 @@ enable_debug() {
 }
 enable_debug
 
-cd ${MODULE_DIR}
+cd ${TF_MODULE_PATH}
 
 if [[ "${RUN_FMT}" == "true" ]]; then
   info "Checking module formatting"
