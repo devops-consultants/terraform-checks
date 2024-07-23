@@ -1,6 +1,6 @@
-FROM alpine:3.20
+FROM alpine:3.20.2
 
-RUN apk add --update --no-cache bash git curl gpgv tflint
+RUN apk add --update --no-cache bash git curl gpgv tflint && apk upgrade
 
 # Install tfenv to manage Terraform versions
 ENV TFENV_INSTALL_DIR=/usr/local/tfenv
