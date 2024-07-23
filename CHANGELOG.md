@@ -1,3 +1,12 @@
+## [0.1.3](https://github.com/devops-consultants/terraform-checks/compare/v0.1.2...v0.1.3) (2024-07-23)
+
+
+### Bug Fixes
+
+* added .terraformrc to configure plugin_cache_dir ([9869b85](https://github.com/devops-consultants/terraform-checks/commit/9869b8571e7e46d27250f688297544391706df96))
+
+
+
 ## [0.1.2](https://github.com/devops-consultants/terraform-checks/compare/v0.1.1...v0.1.2) (2024-07-23)
 
 
