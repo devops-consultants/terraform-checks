@@ -20,6 +20,8 @@ jobs:
         id: changelog
         uses: TriPSs/conventional-changelog-action@v5
         with:
+          version-file: version.json
+          preset: conventionalcommits
           github-token: ${{ github.token }}
           release-count: "0"
 
