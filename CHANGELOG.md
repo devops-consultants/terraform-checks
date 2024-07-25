@@ -1,3 +1,10 @@
+## [0.2.0](https://github.com/devops-consultants/terraform-checks/compare/v0.1.5...v0.2.0) (2024-07-25)
+
+
+### Features
+
+* added terraform-docs to image to check README.md is updated ([a245d9d](https://github.com/devops-consultants/terraform-checks/commit/a245d9d3e6bd271b2031983071f7392d035020cc))
+
 ## [0.1.5](https://github.com/devops-consultants/terraform-checks/compare/v0.1.4...v0.1.5) (2024-07-23)
 
 
