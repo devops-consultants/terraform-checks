@@ -84,4 +84,5 @@ if [[ "${RUN_DOCS}" == "true" ]]; then
   else
     fail "Error!"
   fi
+  rm -f README.md.new
 fi
