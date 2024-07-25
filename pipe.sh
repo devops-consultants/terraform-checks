@@ -15,6 +15,7 @@ RUN_TFLINT=${RUN_TFLINT:="true"}
 RUN_TRIVY=${RUN_TRIVY:="true"}
 RUN_VALIDATE=${RUN_VALIDATE:="true"}
 RUN_FMT=${RUN_FMT:="true"}
+RUN_DOCS=${RUN_DOCS:="true"}
 
 enable_debug() {
   if [[ "${DEBUG}" == "true" ]]; then
@@ -25,10 +26,11 @@ enable_debug() {
 enable_debug
 
 cd ${TF_MODULE_PATH}
+terraform init
 
 if [[ "${RUN_FMT}" == "true" ]]; then
   info "Checking module formatting"
-  run terraform init && terraform fmt -check
+  run terraform fmt -check -diff
 
   if [[ "${status}" == "0" ]]; then
     success "Success!"
@@ -63,6 +65,18 @@ fi
 if [[ "${RUN_TRIVY}" == "true" ]]; then
   info "Checking module vulnerabilities"
   run trivy config .
+
+  if [[ "${status}" == "0" ]]; then
+    success "Success!"
+  else
+    fail "Error!"
+  fi
+fi
+
+if [[ "${RUN_DOCS}" == "true" ]]; then
+  info "Checking module documentation"
+  touch README.md && cp README.md README.md.new
+  run terraform-docs markdown --output-file README.md.new . && diff -bw README.md README.md.new
 
   if [[ "${status}" == "0" ]]; then
     success "Success!"
