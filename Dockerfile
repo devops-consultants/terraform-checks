@@ -1,4 +1,4 @@
-FROM ghcr.io/aquasecurity/trivy:0.52.0 AS trivy
+FROM ghcr.io/aquasecurity/trivy:0.53.0 AS trivy
 
 FROM ghcr.io/terraform-linters/tflint:v0.52.0 AS tflint
 
