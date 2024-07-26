@@ -28,11 +28,17 @@ info "Running module tests for ${TF_MODULE_PATH}"
 
 TERRAFORM_DOCS_CONFIG_OPTS=""
 if [[ -f .terraform-docs.yml ]]; then
-  info "Found .terraform-docs.yml file, using it for terraform-docs configuration"
+  info "Found repo .terraform-docs.yml file, using it for terraform-docs configuration"
   TERRAFORM_DOCS_CONFIG_OPTS="--config $(pwd)/.terraform-docs.yml"
 fi
 
 cd ${TF_MODULE_PATH}
+
+if [[ -f .terraform-docs.yml ]]; then
+  info "Found module .terraform-docs.yml file, using it for terraform-docs configuration"
+  TERRAFORM_DOCS_CONFIG_OPTS="--config $(pwd)/.terraform-docs.yml"
+fi
+
 terraform init
 
 if [[ "${RUN_FMT}" == "true" ]]; then
