@@ -1,3 +1,13 @@
+## [0.2.1](https://github.com/devops-consultants/terraform-checks/compare/v0.2.0...v0.2.1) (2024-07-26)
+
+
+### Bug Fixes
+
+* cleaning up after terraform-docs check ([9909bdc](https://github.com/devops-consultants/terraform-checks/commit/9909bdccaaef33f8c6c711aae553dd16eb98add9))
+* **deps:** updating terraform-docs to 0.18.0 ([9461227](https://github.com/devops-consultants/terraform-checks/commit/94612278b8b239f5070162841ac4ed26dc4705e1))
+* Ensure the repo-level .terraform-docs.yml file is used when checking the docs ([09a7928](https://github.com/devops-consultants/terraform-checks/commit/09a792818f4024e4ba224798948d921d8a0ed5cf))
+* Ensure the repo-level .terraform-docs.yml file is used when checking the docs ([3751c9b](https://github.com/devops-consultants/terraform-checks/commit/3751c9b0c3722e748e35f94ba264dc10bf45837c))
+
 ## [0.2.0](https://github.com/devops-consultants/terraform-checks/compare/v0.1.5...v0.2.0) (2024-07-25)
 
 
