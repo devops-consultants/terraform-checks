@@ -18,7 +18,7 @@ jobs:
 
       - name: Conventional Changelog Action
         id: changelog
-        uses: TriPSs/conventional-changelog-action@v5
+        uses: TriPSs/conventional-changelog-action@v6
         with:
           version-file: version.json
           preset: conventionalcommits
