@@ -2,7 +2,7 @@ FROM ghcr.io/aquasecurity/trivy:0.69.1 AS trivy
 
 FROM ghcr.io/terraform-linters/tflint:v0.60.0 AS tflint
 
-FROM quay.io/terraform-docs/terraform-docs:0.18.0 AS terraform-docs
+FROM quay.io/terraform-docs/terraform-docs:0.20.0 AS terraform-docs
 
 FROM alpine:3.20.2 AS build
 
