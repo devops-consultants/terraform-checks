@@ -4,7 +4,7 @@ FROM ghcr.io/terraform-linters/tflint:v0.60.0 AS tflint
 
 FROM quay.io/terraform-docs/terraform-docs:0.20.0 AS terraform-docs
 
-FROM alpine:3.20.2 AS build
+FROM alpine:3.23.3 AS build
 
 RUN apk add --update --no-cache bash git curl gpgv && apk upgrade
 
